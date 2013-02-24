@@ -1,0 +1,23 @@
+//-
+   This html will be placed in the top of the body
+
+   User: Martin
+   Date: 24-2-13
+   Time: 16:26
+extends layout
+block head
+    title #{title}
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    script(src='/javascript/CanvasRenderer.js')
+    script(src='/javascript/jcanvas.min.js')
+    script(src='/javascript/jquery.mousewheel.min.js')
+
+block contentHeader
+    h1 My superb site
+
+block content
+    canvas#myCanvas(width='578', height='200')
+    script renderCanvas();
+
+block contentFooter
+    p Running on node with Express and Jade
